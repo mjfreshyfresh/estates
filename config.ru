@@ -1,9 +1,5 @@
 require 'rubygems'
-require 'sinatra'
-require 'cgi'
-require 'app'
-require 'estate'
-
-map '/' do
-  run App
-end
+require 'app.rb'
+set :run, false
+set :environment, :production
+run Sinatra::Application
